@@ -11,8 +11,10 @@ dependencies = []
 
 [build]
 repo = 'https://codeberg.org/zortazert/snakesay.git' # git repo to install
+branch = 'go1.18.1'
 make_sudo  = true
 make = [[], ['install']] # run make and then make install 
-commands = [] # custom commands to run
+pre_scripts = [] # custom commands to run
+post_scripts = [] # custom commands to run
 [[build.linux_any]]
-commands = [['echo', 'Tux!']] # custom commands to run 
+post_scripts = [['echo', 'Tux!']] # custom commands to run 
