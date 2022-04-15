@@ -8,23 +8,24 @@ archs = ['arm64', 'x86_64'] # Possible values: 'arm64', 'x86_64', 'universal'
 types = ['binary'] # Possible values: 'binary', 'build', 'app'
 dependencies = []
 
-[binaries]
-[[binary.arm64]]
-files = ['https://storage.googleapis.com/golang/go1.18.darwin-arm64.tar.gz']
-bin_dirs = ['bin']
-[[binary.x86_64]]
-files = ['https://storage.googleapis.com/golang/go1.18.darwin-amd64.tar.gz']
+[binary]
+    [[binary.arm64]]
+    files = ['https://storage.googleapis.com/golang/go1.18.darwin-arm64.tar.gz']
+    bin_dirs = ['bin']
+    [[binary.x86_64]]
+    files = ['https://storage.googleapis.com/golang/go1.18.darwin-amd64.tar.gz']
 
-[[binary.install]] # Install options for all architectures
-pre_scripts = [['echo', "You're about to get go!"]] 
-post_scripts = [['echo', 'Thanks for downloading go!']]
+    [[binary.install]] # Install options for all architectures
+    pre_scripts = [['echo', "You're about to get go!"]] 
+    post_scripts = [['echo', 'Thanks for downloading go!']]
 
-[[binary.uninstall]]
-post_scripts = [['echo', 'No more go :(']]
+        [[binary.install.arm64]]
+        post_scripts = [['echo', "Using arm!"]]
 
-[[binary.install.arm64]]
-post_scripts = [['echo', "Using arm!"]]
+        [[binary.install.x86_64]]
+        post_scripts = [['echo', 'Using x86_84!']]
 
-[[binary.install.x86_64]]
-post_scripts = [['echo', 'Using x86_84!']]
+    [[binary.uninstall]]
+    post_scripts = [['echo', 'No more go :(']]
+
 
