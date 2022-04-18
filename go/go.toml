@@ -8,7 +8,7 @@ types = ['binary'] # Possible values: 'binary', 'build', 'app'
 dependencies = []
 
 [binary]
-pre_scripts = [['echo', "You're about to get go!"]] 
+scripts = [['echo', "You're about to get go!"]] 
 post_scripts = [['echo', 'Thanks for downloading go!']]
 
     [[binary.arm64]]
@@ -18,7 +18,7 @@ post_scripts = [['echo', 'Thanks for downloading go!']]
     files = ['https://storage.googleapis.com/golang/go1.18.darwin-amd64.tar.gz']
 
     [[binary.install]] # Install options for all architectures
-    pre_scripts = [['echo', "You're about to get go!"]] 
+    scripts = [['echo', "You're about to get go!"]] 
     post_scripts = [['echo', 'Thanks for downloading go!']]
 
         [[binary.install.arm64]]

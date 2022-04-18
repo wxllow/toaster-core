@@ -10,7 +10,7 @@ dependencies = ['python', 'go>1.18']
 
 
 [binary]
-pre_scripts = [['echo', 'hello!']] # custom commands to run "pre"-install
+scripts = [['echo', 'hello!']] # custom commands to run during install
 post_scripts = [['echo', 'hello again!']] # custom commands to run post-install
 
     [[binary.universal]]
@@ -30,26 +30,26 @@ post_scripts = [['echo', 'hello again!']] # custom commands to run post-install
 repo = 'https://github.com/example/example' # git repo to install
 branch = 'master' # repo branch to clone
 make_sudo = false # run make commands as sudo or not (should be avoided though)
-pre_scripts = [['echo', 'hello!']] # custom commands to run "pre"-install
+scripts = [['echo', 'hello!']]
 make = [[], ['install']] # make commands
-post_scripts = [['echo', 'hello again!']] # custom commands to run post-install
+post_scripts = [['echo', 'hello again!']]
 
 # Indentation is optional btw :)
     [[build.universal]]
-    pre_scripts = [['echo', 'hello, apple!']]
+    scripts = [['echo', 'hello, apple!']]
     post_scripts = [['echo', 'hello again, apple!']]
 
     [[build.linux_any]]
     post_scripts = [['echo', 'hello, tux!']]
 
     [[build.uninstall]]
-    pre_scripts = [['echo', 'bye bye!']]
+    scripts = [['echo', 'bye bye!']]
     post_scripts = [['echo', 'bye bye again!']]
 
         [[build.uninstall.universal]]
-        pre_scripts = [['echo', 'bye bye, apple!']]
+        scripts = [['echo', 'bye bye, apple!']]
         post_scripts = [['echo', 'bye bye again, apple!']]
 
         [[build.uninstall.linux_any]]
-        pre_scripts = [['echo', 'bye bye, tux!']]
+        scripts = [['echo', 'bye bye, tux!']]
         post_scripts = [['echo', 'bye bye again, tux!']]

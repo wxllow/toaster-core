@@ -15,8 +15,8 @@ make = [[], ['install']] # run make and then make install
 
 [[build.uninstall.universal]]
 # Uninstall scripts
-pre_scripts = [['sudo', 'rm', '/usr/local/bin/snakesay'], ['sudo', 'rm', '/usr/local/share/fortunes.txt']]
+scripts = [['sudo', 'rm', '/usr/local/bin/snakesay'], ['sudo', 'rm', '/usr/local/share/fortunes.txt']]
 
 [[build.uninstall.linux_any]]
-pre_scripts = [['sudo', 'rm', '/usr/bin/snakesay'], ['sudo', 'rm', '/usr/share/fortunes.txt']]
+scripts = [['sudo', 'rm', '/usr/bin/snakesay'], ['sudo', 'rm', '/usr/share/fortunes.txt']]
 post_scripts = [['echo', 'Bye bye tux! :(']] # custom commands to run
