@@ -1,0 +1,55 @@
+name = 'example'
+desc = 'An example TOML.'
+version = '1.0.0'
+version_type = 'development'
+license = "MIT"
+archs = ['universal'] # Possible values: 'arm64', 'x86_64', 'universal'
+linux_archs = ['any'] # Possible values: 'any', 'x86_64'
+types = ['binary', 'build'] # Possible values: 'binary', 'build', 'app'
+dependencies = ['python', 'go>1.18']
+
+
+[binary]
+pre_scripts = [['echo', 'hello!']] # custom commands to run "pre"-install
+post_scripts = [['echo', 'hello again!']] # custom commands to run post-install
+
+    [[binary.universal]]
+    files = ['https://example.com/example-darwin-universal2.tar.gz']
+    type = 'gz'
+    bin_dirs = ['bin']
+
+    [[binary.linux_any]]
+    files = ['https://example.com/example-linux.tar.gz']
+    type = 'gz'
+    bin_dirs = ['bin']
+
+    [[binary.uninstall]]
+    post_scripts = [['echo', 'No more go :(']]
+
+[build]
+repo = 'https://github.com/example/example' # git repo to install
+branch = 'master' # repo branch to clone
+make_sudo = false # run make commands as sudo or not (should be avoided though)
+pre_scripts = [['echo', 'hello!']] # custom commands to run "pre"-install
+make = [[], ['install']] # make commands
+post_scripts = [['echo', 'hello again!']] # custom commands to run post-install
+
+# Indentation is optional btw :)
+    [[build.universal]]
+    pre_scripts = [['echo', 'hello, apple!']]
+    post_scripts = [['echo', 'hello again, apple!']]
+
+    [[build.linux_any]]
+    post_scripts = [['echo', 'hello, tux!']]
+
+    [[build.uninstall]]
+    pre_scripts = [['echo', 'bye bye!']]
+    post_scripts = [['echo', 'bye bye again!']]
+
+        [[build.uninstall.universal]]
+        pre_scripts = [['echo', 'bye bye, apple!']]
+        post_scripts = [['echo', 'bye bye again, apple!']]
+
+        [[build.uninstall.linux_any]]
+        pre_scripts = [['echo', 'bye bye, tux!']]
+        post_scripts = [['echo', 'bye bye again, tux!']]

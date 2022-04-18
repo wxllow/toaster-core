@@ -1,4 +1,3 @@
-[info]
 name = 'snakesay'
 desc = 'A less feature rewrite of cowsay in Python.'
 version = '1.0.0'
@@ -13,14 +12,6 @@ dependencies = []
 repo = 'https://codeberg.org/zortazert/snakesay.git' # git repo to install
 make_sudo  = true
 make = [[], ['install']] # run make and then make install 
-pre_scripts = [] # custom commands to run
-post_scripts = [] # custom commands to run
-
-[[build.universal]]
-post_scripts = [['echo', 'Apple!']] # custom commands to run
-
-[[build.linux_any]]
-post_scripts = [['echo', 'Tux!']] # custom commands to run
 
 [[build.uninstall.universal]]
 # Uninstall scripts
