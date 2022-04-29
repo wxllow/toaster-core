@@ -30,6 +30,7 @@ post_scripts = [['echo', 'hello again!']] # custom commands to run post-install
 repo = 'https://github.com/example/example' # git repo to install
 branch = 'master' # repo branch to clone
 make_sudo = false # run make commands as sudo or not (should be avoided though)
+format_scripts = true # formats scripts and make with things like {prefix}
 scripts = [['echo', 'hello!']]
 make = [[], ['install']] # make commands
 post_scripts = [['echo', 'hello again!']]
