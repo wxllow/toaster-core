@@ -9,7 +9,7 @@ types = ["build"]
 dependencies = ["python>=3.9"]
 
 [build]
-repo = "https://github.com/mudkipdev/mudkip"
+repo = "https://github.com/wxllow/mudkip"
 branch = "main"
 format_scripts = true
 make = [[], ["prefix={prefix}", "install"]]
