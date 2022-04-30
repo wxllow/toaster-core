@@ -1,5 +1,5 @@
 name = 'example'
-desc = 'An example TOML.'
+desc = 'An example package.'
 version = '1.0.0'
 version_type = 'development'
 license = "MIT"
