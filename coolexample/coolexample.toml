@@ -11,4 +11,5 @@ dependencies = []
 [build]
 repo = 'https://github.com/wxllow/coolexample' # git repo to install
 format_scripts = true # formats scripts and make with things like {prefix}
-make = [[], ['prefix={prefix}/bin', 'install']] # run make and then make install 
+scripts = [['echo', '{prefix}']]
+make = [[], ['prefix={prefix}', 'install']] # run make and then make install 
