@@ -1,0 +1,15 @@
+name = "mudkip"
+desc = "Prints an ASCII art of the Pokemon mudkip to your terminal."
+version = "1.0.0"
+version_type = "release"
+license = "MIT"
+archs = ["universal"]
+linux_archs = ["any"]
+types = ["build"]
+dependencies = ["python>=3.9"]
+
+[build]
+repo = "https://github.com/mudkipdev/mudkip"
+branch = "main"
+format_scripts = true
+make = [[], ["prefix={prefix}", "install"]]
