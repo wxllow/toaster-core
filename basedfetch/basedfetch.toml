@@ -11,4 +11,4 @@ dependencies = []
 [build]
 repo = 'https://github.com/wxllow/basedfetch' # git repo to install
 format_scripts = true # formats scripts and make with things like {prefix}
-scripts = [['make', '-f Makefile_toaster', 'prefix={prefix}', 'install']] # run make and then make install 
+scripts = [['make', '-f', './Makefile_toaster', 'prefix={prefix}', 'install']] # run make and then make install 
