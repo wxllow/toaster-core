@@ -1,5 +1,5 @@
 name = 'basedfetch'
-desc = 'cool example made for toaster'
+desc = 'neofetch with some extra features'
 version = '1.0.0'
 version_type = 'stable'
 license = "MIT"
