@@ -12,5 +12,4 @@ dependencies = ["python>=3.9"]
 repo = "https://github.com/wxllow/mudkip"
 branch = "main"
 format_scripts = true
-scripts = ['echo', 'PREFIX!! {prefix}']
-make = [[], ["prefix={prefix}", "install"]]
+scripts = ['make', 'PREFIX={prefix}', 'install']
