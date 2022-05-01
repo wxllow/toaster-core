@@ -8,29 +8,11 @@ linux_archs = ['any'] # Possible values: 'any', 'x86_64'
 types = ['binary', 'build'] # Possible values: 'binary', 'build', 'app'
 dependencies = ['python', 'go>=1.18']
 
-
-[binary]
-scripts = [['echo', 'hello!']] # custom commands to run during install
-post_scripts = [['echo', 'hello again!']] # custom commands to run post-install
-
-    [[binary.universal]]
-    files = ['https://example.com/example-darwin-universal2.tar.gz']
-    type = 'gz'
-    bin_dirs = ['bin']
-
-    [[binary.linux_any]]
-    files = ['https://example.com/example-linux.tar.gz']
-    type = 'gz'
-    bin_dirs = ['bin']
-
-    [[binary.uninstall]]
-    post_scripts = [['echo', 'No more :(']]
-
 [build]
 repo = 'https://github.com/example/example' # git repo to install
 branch = 'master' # repo branch to clone
 format_scripts = true # formats scripts and make with things like {prefix}
-scripts = [['echo', 'hello!']]
+scripts = [['echo', 'hello!']] # scripts 
 make = [[], ['install']] # make commands
 post_scripts = [['echo', 'hello again!']]
 
@@ -53,3 +35,21 @@ post_scripts = [['echo', 'hello again!']]
         [[build.uninstall.linux_any]]
         scripts = [['echo', 'bye bye, tux!']]
         post_scripts = [['echo', 'bye bye again, tux!']]
+
+[binary]
+scripts = [['echo', 'hello!']] # custom commands to run during install
+post_scripts = [['echo', 'hello again!']] # custom commands to run post-install
+
+    [[binary.universal]]
+    files = ['https://example.com/example-darwin-universal2.tar.gz']
+    type = 'gz'
+    bin_dirs = ['bin']
+
+    [[binary.linux_any]]
+    files = ['https://example.com/example-linux.tar.gz']
+    type = 'gz'
+    bin_dirs = ['bin']
+
+    [[binary.uninstall]]
+    post_scripts = [['echo', 'No more :(']]
+
