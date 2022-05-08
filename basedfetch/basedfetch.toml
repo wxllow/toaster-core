@@ -1,6 +1,6 @@
 name = 'basedfetch'
 desc = 'neofetch with some extra features'
-version = '1.0.0'
+version = '1.0.2'
 version_type = 'stable'
 license = "MIT"
 archs = ['universal']
