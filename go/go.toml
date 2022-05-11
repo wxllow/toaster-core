@@ -4,7 +4,7 @@ version = '1.16'
 version_type = 'stable'
 license = "BSD-3-Clause"
 archs = ['arm64', 'x86_64'] # Possible values: 'arm64', 'x86_64', 'universal'
-types = ['binary', 'build'] # Possible values: 'binary', 'build', 'app'
+types = ['binary'] # Possible values: 'binary', 'build', 'app'
 
 [binary]
 type = 'gz'
