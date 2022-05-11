@@ -1,0 +1,19 @@
+name = 'example'
+desc = 'An example package.'
+version = '1.0.0'
+version_type = 'development'
+license = "BSD-3-Clause"
+archs = ['arm64', 'x86_64'] # Possible values: 'arm64', 'x86_64', 'universal'
+types = ['binary', 'build'] # Possible values: 'binary', 'build', 'app'
+dependencies = ['python', 'go>=1.18']
+
+[binary]
+    [[binary.arm64]]
+    url = 'https://storage.googleapis.com/golang/go1.16.darwin-arm64.tar.gz'
+    type = 'gz'
+    bin_dirs = ['bin']
+
+    [[binary.x86_64]]
+    url = 'https://storage.googleapis.com/golang/go1.16.darwin-amd64.tar.gz'
+    type = 'gz'
+    bin_dirs = ['bin']
