@@ -12,4 +12,4 @@ dependencies = ["python>=3.9"]
 repo = "https://github.com/python/cpython"
 branch = "v3.10.4"
 format_scripts = true
-scripts = [['./configure', '--prefix="{prefix}"'], ['make'], ['make', 'test'], ['make', 'install']]
+scripts = [['./configure', '--prefix={prefix}'], ['make'], ['make', 'test'], ['make', 'install']]
