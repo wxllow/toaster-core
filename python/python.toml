@@ -1,0 +1,15 @@
+name = "python"
+desc = "Python is a programming language that lets you work more quickly and integrate your systems more effectively."
+version = " 3.10.4"
+version_type = "release"
+license = "PSF"
+archs = ["universal"]
+linux_archs = ["any"]
+types = ["build"]
+dependencies = ["python>=3.9"]
+
+[build]
+repo = "https://github.com/python/cpython"
+branch = "v3.10.4"
+format_scripts = true
+scripts = [['./configure', '--prefix="{prefix}"'], ['make'], ['make', 'test'], ['make', 'install']]
