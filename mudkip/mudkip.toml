@@ -6,7 +6,7 @@ license = "MIT"
 archs = ["universal"]
 linux_archs = ["any"]
 types = ["build"]
-dependencies = ["python>=3.9", "go"]
+dependencies = ["python>=3.9"]
 
 [build]
 repo = "https://github.com/wxllow/mudkip"
