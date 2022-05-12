@@ -1,6 +1,6 @@
 name = "python"
 desc = "Python is a programming language that lets you work more quickly and integrate your systems more effectively."
-version = " 3.10.4"
+version = "3.10.4"
 version_type = "release"
 license = "PSF"
 archs = ["universal"]
