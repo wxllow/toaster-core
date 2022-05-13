@@ -12,4 +12,13 @@ dependencies = []
 repo = "https://github.com/python/cpython"
 branch = "v3.10.4"
 format_scripts = true
-scripts = [['./configure', '--prefix={prefix}'], ['make'], ['make', 'test'], ['make', 'install']]
+scripts = [['./configure', '--prefix={prefix}', '--with-ssl', '--enable-optimizations'], ['make'], ['make', 'test', '||', 'exit', '1'], ['make', 'install']]
+post_scritps = [[
+    'curl', 
+    'https://raw.githubusercontent.com/pypa/cibuildwheel/main/cibuildwheel/resources/install_certifi.py', 
+    '--output', 
+    'install_certifi.py',
+    '&&',
+    'bin/python3',
+    './install_certifi.py'
+]]
