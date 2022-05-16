@@ -21,6 +21,6 @@ scripts = [
         "no-ssl3-method",
         "no-zlib"
     ],
+    ['make'],
     ['make', 'test'],
-    ['make', 'install']
 ]
