@@ -14,12 +14,14 @@ url = "https://www.openssl.org/source/openssl-1.1.1o.tar.gz"
 type = 'gz'
 format_scripts = true
 scripts = [
-    ['./configure', 
+    [
+        './Configure', 
         '--prefix={prefix}', 
         "--with-libssl-prefix=$HOME/.toaster/openssl", 
         "no-ssl3",
         "no-ssl3-method",
-        "no-zlib"
+        "no-zlib",
+        "darwin64-arm64-cc",
     ],
     ['make'],
     ['make', 'test'],
