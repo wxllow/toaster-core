@@ -14,6 +14,7 @@ url = "https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz"
 type = 'gz'
 format_scripts = true
 scripts = [
+    ['cd', 'wget-1.21.3'],
     ['./bootstrap', '--skip-po'],
     ['./configure', 
         '--skip-po', 
