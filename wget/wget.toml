@@ -17,7 +17,7 @@ scripts = [
     ['./bootstrap'],
     ['./configure', 
         '--prefix={prefix}', 
-        '--sysconfdir=~/.toaster/etc',
+        '--sysconfdir=$HOME/.toaster/etc',
         "--with-ssl=openssl", 
         "--disable-pcre", 
         "--disable-pcre2",
