@@ -17,7 +17,6 @@ scripts = [
     [
         './Configure', 
         '--prefix={prefix}', 
-        "--with-libssl-prefix=$HOME/.toaster/openssl", 
         "no-ssl3",
         "no-ssl3-method",
         "no-zlib",
