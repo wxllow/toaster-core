@@ -1,0 +1,26 @@
+name = "openssl 1.1"
+homepage = "https://www.openssl.org/"
+desc = "SSL toolkit."
+version = "1.1"
+version_type = "release"
+license = "OpenSSL"
+archs = ["universal"]
+linux_archs = ["any"]
+types = ["build"]
+dependencies = []
+
+[build]
+url = "https://www.openssl.org/source/openssl-1.1.1o.tar.gz"
+type = 'gz'
+format_scripts = true
+scripts = [
+    ['./configure', 
+        '--prefix={prefix}', 
+        "--with-libssl-prefix=$HOME/.toaster/openssl", 
+        "no-ssl3",
+        "no-ssl3-method",
+        "no-zlib"
+    ],
+    ['make', 'test'],
+    ['make', 'install']
+]
