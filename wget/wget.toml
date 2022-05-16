@@ -7,7 +7,7 @@ license = "GPL-3.0"
 archs = ["universal"]
 linux_archs = ["any"]
 types = ["build"]
-dependencies = ['openssl']
+dependencies = []
 
 [build]
 url = "https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz"
@@ -18,8 +18,6 @@ scripts = [
     ['./configure', 
         '--prefix={prefix}', 
         '--sysconfdir=$HOME/.toaster/etc',
-        # "--with-ssl=openssl",
-        # "--with-libssl-prefix=$HOME/.toaster/packages/openssl@1.1", 
         "--disable-pcre", 
         "--disable-pcre2",
         "--without-libpsl", 
