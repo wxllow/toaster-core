@@ -13,32 +13,6 @@ repo = "https://github.com/python/cpython"
 branch = "v3.10.4"
 format_scripts = true
 scripts = [
-    ['./configure', '--prefix={prefix}', '--with-ssl', '--enable-optimizations'], 
+    ['./configure', '--prefix={prefix}', '--with-ssl', '--enable-optimizations', '--CFLAGS="-Wno-error=unused-command-line-argument"'], 
     ['make'], ['make', 'test', '||', 'exit', '1'], ['make', 'install']
-]
-post_scritps = [[
-        'curl', 
-        'https://raw.githubusercontent.com/pypa/cibuildwheel/main/cibuildwheel/resources/install_certifi.py', 
-        '--output', 
-        'install_certifi.py',
-        '&&',
-        'bin/python3',
-        './install_certifi.py'
-    ], 
-    [
-        'bin/python3',
-        '-m',
-        'pip',
-        'install',
-        'GitPython',
-        'atomicwrites',
-        'click',
-        'click-aliases',
-        'filelock',
-        'packaging',
-        'requests',
-        'toml',
-        'tqdm',
-        'validators',
-    ]
 ]
