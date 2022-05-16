@@ -1,0 +1,29 @@
+name = "wget"
+homepage = "https://www.gnu.org/software/wget/"
+desc = "A computer program that retrieves content from web servers."
+version = "1.21.3"
+version_type = "release"
+license = "GPL-3.0"
+archs = ["universal"]
+linux_archs = ["any"]
+types = ["build"]
+dependencies = []
+
+[build]
+url = "https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz"
+type = 'gz'
+format_scripts = true
+scripts = [
+    ['./bootstrap', '--skip-po'],
+    ['./configure', 
+        '--skip-po', 
+        '--prefix={prefix}', 
+        '--sysconfdir=~/.toaster/etc',
+        "--with-ssl=openssl", 
+        "--disable-pcre", 
+        "--disable-pcre2",
+        "--without-libpsl", 
+        "--without-included-regex"
+    ],
+    ['make', 'install']
+]
