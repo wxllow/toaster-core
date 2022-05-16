@@ -4,6 +4,7 @@ version = '1.16'
 version_type = 'stable'
 license = "BSD-3-Clause"
 archs = ['arm64', 'x86_64'] # Possible values: 'arm64', 'x86_64', 'universal'
+linux_archs = ['any', 'x86_64']
 types = ['binary'] # Possible values: 'binary', 'build', 'app'
 
 [binary]
@@ -15,3 +16,9 @@ link_dirs = ['bin']
 
     [[binary.x86_64]]
     url = 'https://storage.googleapis.com/golang/go1.16.darwin-amd64.tar.gz'
+    
+    [[binary.linux_any]]
+    url = 'https://storage.googleapis.com/golang/go1.16.linux-arm64.tar.gz'
+
+    [[binary.linux_x86_64]]
+    url = 'https://storage.googleapis.com/golang/go1.16.linux-amd64.tar.gz'
