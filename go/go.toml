@@ -8,7 +8,7 @@ types = ['binary'] # Possible values: 'binary', 'build', 'app'
 
 [binary]
 type = 'gz'
-link_dirs = ['go/bin']
+link_dirs = ['bin']
 
     [[binary.arm64]]
     url = 'https://storage.googleapis.com/golang/go1.16.darwin-arm64.tar.gz'
