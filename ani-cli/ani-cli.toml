@@ -1,0 +1,16 @@
+name = "ani-cli"
+desc = "A cli to browse and watch anime (alone AND with friends). This tool scrapes the site gogoplay."
+version = "2.2"
+version_type = "release"
+license = "MIT"
+archs = ["universal"]
+linux_archs = ["any"]
+types = ["build"]
+dependencies = ["python>=3.9"]
+
+[build]
+repo = "https://github.com/pystardust/ani-cli"
+branch = "v2.2"
+format_scripts = true
+link_dirs = ['']
+scripts = [['mv', 'ani-cli', '{prefix}/ani-cli'], ['chmod', '+x', '{prefix}/ani-cli']]
