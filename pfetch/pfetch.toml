@@ -1,0 +1,15 @@
+name = 'pfetch'
+desc = 'A pretty system information tool written in POSIX sh'
+version = '0.6.0'
+version_type = 'stable'
+license = 'MIT'
+archs = ['universal']
+linux_archs = ['any']
+types = ['build']
+dependencies = []
+
+[build]
+repo = 'https://github.com/dylanaraps/pfetch/tree/0.6.0'
+branch = '0.6.0'
+format_scripts = true
+scripts = [['mv', './pfetch', '{prefix}/bin/pfetch']]
