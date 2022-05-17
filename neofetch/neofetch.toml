@@ -1,0 +1,15 @@
+name = 'basedfetch'
+desc = '🖼️ A command-line system information tool written in bash 3.2+'
+version = '7.1.0'
+version_type = 'stable'
+license = "MIT"
+archs = ['universal']
+linux_archs = ['any']
+types = ['build']
+dependencies = []
+
+[build]
+repo = 'https://github.com/dylanaraps/neofetch'
+branch = '7.1.0'
+format_scripts = true
+scripts = [['make', 'PREFIX={prefix}', 'install']]
