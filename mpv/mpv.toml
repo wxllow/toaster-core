@@ -22,3 +22,8 @@ scripts = [
     ['ln', '-s', '{prefix}/mpv.app', '/Applications/mpv.app'],
     ['ln', '-s', '{prefix}/mpv.app/Contents/macOS/mpv', '{prefix}/bin/mpv']
 ]
+
+[build.uninstall]
+scripts = [
+    ['rm', '-rf', '/Applications/mpv.app']
+]
