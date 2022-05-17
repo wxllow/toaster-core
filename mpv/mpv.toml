@@ -18,7 +18,7 @@ url = 'https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-0.34.1.tar.gz'
 format_scripts = true
 scripts = [
     ['mkdir', '{prefix}/mpv.app'],
-    ['mv', '.', '{prefix}/mpv.app'],
+    ['cp', './', '{prefix}/mpv.app'],
     ['ln', '-s', '{prefix}/mpv.app', '/Applications/mpv.app'],
     ['ln', '-s', '{prefix}/mpv.app/Contents/macOS/mpv', '{prefix}/bin/mpv']
 ]
