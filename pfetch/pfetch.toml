@@ -9,7 +9,7 @@ types = ['build']
 dependencies = []
 
 [build]
-repo = 'https://github.com/dylanaraps/pfetch/tree/0.6.0'
+repo = 'https://github.com/dylanaraps/pfetch'
 branch = '0.6.0'
 format_scripts = true
 scripts = [['mv', './pfetch', '{prefix}/bin/pfetch']]
