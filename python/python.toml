@@ -18,6 +18,12 @@ type = 'gz'
     [[ binary.x86_64 ]]
     url = 'https://github.com/indygreg/python-build-standalone/releases/download/20220502/cpython-3.10.4+20220502-x86_64-apple-darwin-install_only.tar.gz'
 
+    [[ binary.linux_any ]]
+    url = 'https://github.com/indygreg/python-build-standalone/releases/download/20220502/cpython-3.10.4+20220502-aarch64-unknown-linux-gnu-install_only.tar.gz'
+
+    [[ binary.linux_x86_64 ]]
+    url = 'https://github.com/indygreg/python-build-standalone/releases/download/20220502/cpython-3.10.4+20220502-x86_64-unknown-linux-gnu-install_only.tar.gz'
+
 [build]
 repo = "https://github.com/python/cpython"
 branch = "v3.10.4"
