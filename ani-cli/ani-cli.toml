@@ -6,7 +6,7 @@ license = "GPL-3.0"
 archs = ["universal"]
 linux_archs = ["any"]
 types = ["build"]
-dependencies = []
+dependencies = ['mpv']
 
 [build]
 repo = "https://github.com/pystardust/ani-cli"
