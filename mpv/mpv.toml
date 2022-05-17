@@ -8,10 +8,10 @@ version_type = "release"
 license = ""
 archs = ["universal"]
 # linux_archs = ["any"]
-types = ["binary"]
+types = ["build"]
 dependencies = []
 
-[binary]
+[build]
 type='gz'
 
 url = 'https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-0.34.1.tar.gz'
