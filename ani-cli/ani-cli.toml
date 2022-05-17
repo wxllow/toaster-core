@@ -16,6 +16,6 @@ link_dirs = ['']
 scripts = [['mv', 'ani-cli', '{prefix}/ani-cli'], ['chmod', '+x', '{prefix}/ani-cli']]
 
     [build.linux_any]
-    post_script = [
+    post_scripts = [
         ['printf', '\033[1;33mMake sure you have installed mpv, see https://mpv.io/installation/ for more info!\n\033[0m']
     ]
