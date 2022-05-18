@@ -19,10 +19,10 @@ format_scripts = true
 link_dirs = ['bin']
 
 scripts = [
-    ['ln', '-s', '$(pwd)', '/Applications/mpv.app'],
+    ['ln', '-s', '{prefix}', '/Applications/mpv.app'],
     ['mkdir', 'bin'],
-    ['echo', '$(pwd)/Contents/macOS/mpv'],
-    ['ln', '-s', '$(pwd)/Contents/macOS/mpv', './bin/mpv']
+    ['echo', '{prefix}/Contents/macOS/mpv'],
+    ['ln', '-s', '{prefix}/Contents/macOS/mpv', './bin/mpv']
 ]
 
 [binary.uninstall]
