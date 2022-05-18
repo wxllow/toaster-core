@@ -17,7 +17,9 @@ type='gz'
 url = 'https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-0.34.1.tar.gz'
 format_scripts = true
 link_dirs = ['bin']
+
 scripts = [
+    ['ls'],
     ['ln', '-s', './', '/Applications/mpv.app'],
     ['mkdir', 'bin'],
     ['ln', '-s', './Contents/macOS/mpv', './bin/mpv']
