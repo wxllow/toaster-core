@@ -21,6 +21,7 @@ link_dirs = ['bin']
 scripts = [
     ['ln', '-s', '$(pwd)', '/Applications/mpv.app'],
     ['mkdir', 'bin'],
+    ['echo', '$(pwd)/Contents/macOS/mpv']
     ['ln', '-s', '$(pwd)/Contents/macOS/mpv', './bin/mpv']
 ]
 
