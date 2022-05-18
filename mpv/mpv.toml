@@ -19,9 +19,10 @@ format_scripts = true
 link_dirs = ['bin']
 
 scripts = [
-    ['ln', '-s', '{prefix}', '/Applications/mpv.app'],
+    ['mkdir', 'mpv.app'],
+    ['mv', '*', 'mpv.app']
+    ['ln', '-s', '{prefix}/mpv.app', '/Applications/mpv.app'],
     ['mkdir', 'bin'],
-    ['echo', '{prefix}/Contents/macOS/mpv'],
     ['ln', '-s', '{prefix}/Contents/macOS/mpv', './bin/mpv']
 ]
 
