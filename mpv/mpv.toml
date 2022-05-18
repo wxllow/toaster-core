@@ -8,22 +8,20 @@ version_type = "release"
 license = ""
 archs = ["universal"]
 # linux_archs = ["any"]
-types = ["build"]
+types = ["binary"]
 dependencies = []
 
-[build]
+[binary]
 type='gz'
 
 url = 'https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-0.34.1.tar.gz'
 format_scripts = true
 scripts = [
-    ['mkdir', '{prefix}/mpv.app'],
-    ['cp', '-r', './', '{prefix}/mpv.app'],
-    ['ln', '-s', '{prefix}/mpv.app', '/Applications/mpv.app'],
-    ['ln', '-s', '{prefix}/mpv.app/Contents/macOS/mpv', '{prefix}/bin/mpv']
+    ['ln', '-s', './', '/Applications/mpv.app'],
+    ['ln', '-s', './Contents/macOS/mpv', './bin/mpv']
 ]
 
-[build.uninstall]
+[binary.uninstall]
 scripts = [
     ['rm', '-rf', '/Applications/mpv.app']
 ]
