@@ -1,0 +1,31 @@
+name = "gnutls"
+homepage = "https://gnutls.org/"
+desc = "GNU Transport Layer Security (TLS) Library"
+version = "3.7.4"
+version_type = "release"
+license = "GPL-3.0"
+archs = ["universal"]
+linux_archs = ["any"]
+types = ["build"]
+dependencies = []
+
+[build]
+url = "https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.4.tar.xz"
+type = 'tar'
+format_scripts = true
+scripts = [
+    ['./configure', 
+        '--disable-dependency-tracking',
+        '--disable-silent-rules',
+        '--disable-static',
+        '--disable-heartbeat-support',
+        '--with-p11-kit',
+        '--prefix={prefix}', 
+        '--sysconfdir=$HOME/.toaster/etc',
+        "--disable-pcre", 
+        "--disable-pcre2",
+        "--without-libpsl", 
+        "--without-included-regex"
+    ],
+    ['make', 'install']
+]
