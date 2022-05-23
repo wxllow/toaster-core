@@ -7,14 +7,13 @@ license = "GPL-3.0"
 archs = ["universal"]
 linux_archs = ["any"]
 types = ["build"]
-dependencies = []
+dependencies = ['pkg-config']
 
 [build]
 url = "https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz"
 type = 'gz'
 format_scripts = true
 scripts = [
-    ['./bootstrap'],
     ['./configure', 
         '--prefix={prefix}', 
         '--sysconfdir=$HOME/.toaster/etc',
